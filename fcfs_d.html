@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Scheduling Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FCFS Scheduling Demo</h1>
+            <p>First-Come First-Served CPU Scheduling Algorithm</p>
+        </div>
+        
+        <div class="box">
+            <div class="input">
+                <label for="nprocesses">Enter the number of Processes:</label>
+                <input id="nprocesses" name="nprocesses" type="number" min="1" max="10" placeholder="Between 1 and 10">
+                
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-circle"></i> You can add a maximum of 10 and a minimum of 1 processes
+                </div>
+                
+                <button id="inputButton" onclick="displayInputTable()">
+                    <i class="fas fa-table"></i> Generate Input Table
+                </button>
+            </div>
+            
+            <div class="table" id="inputTable"></div>
+            
+            <button id="save" onclick="saveData()" style="display: none; margin-top: 20px;">
+                <i class="fas fa-save"></i> Save Process Data
+            </button>
+            
+            <div id="options"></div>
+            
+            <div id="gainchart"></div>
+            
+            <div id="outputTable"></div>
+            
+            <div id="analysis"></div>
+            
+            <button id="clear" onclick="clearAll()" style="display: none; margin-top: 20px;">
+                <i class="fas fa-trash-alt"></i> Clear All
+            </button>
+        </div> 
+        
+        <!--<div class="card-links" style="margin-top: 30px;">
+                <a class="demo" href="fcfs_v.html">
+                    <i class="fas fa-play"></i> Try FCFS Animation
+                </a>
+        </div>-->
+
+
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="fcfs.js"></script>
+    <script src="cd.js"></script>
+</body>
+</html>
