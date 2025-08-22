@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scheduling Algorithms</title>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body><div class="container">
+<div class="box">
+<div class="input">
+<label for="nprocesses">Enter the number of Processes :</label>
+<input id="nprocesses" name="nprocesses" type="number"/><br/><br/>
+<p>#Note : you can add maximum 10 and minimum 1 Processes</p><br/>
+<button id="inputButton" onclick="displayInputTable()"> Get Input Table</button>
+</div>
+<div class="table">
+<div id="inputTable"></div>
+<div id="save" onclick="saveData()"></div>
+</div>
+<div class="algorithms">
+<div id="options"></div>
+</div>
+<div id="gainchart"></div>
+<div id="outputTable"></div>
+<div id="analysis"></div>
+<div id="clear"></div>
+</div>
+<script src="script.js"></script>
+<script src="rr.js"></script>
+<script src="cd.js"></script>
+</div></body>
+</html>
