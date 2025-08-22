@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Scheduling Algorithm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h2><i class="fas fa-clock"></i> FCFS Scheduling Algorithm</h2>
+            
+            <p>
+                FCFS (First-Come, First-served) is the simplest type of scheduling algorithm in which processes are executed 
+                based on their arrival time. The process that arrives first is executed first, followed by the next process 
+                in the queue. It operates on a non-preemptive basis, meaning once a process starts executing, it continues 
+                until it completes.
+            </p>
+            
+            <h3><i class="fas fa-star"></i> Characteristics of FCFS:</h3>
+            <ul>
+                <li><strong>Non-preemptive:</strong> Once a process starts executing, it runs to completion.</li>
+                <li><strong>Simple to implement:</strong> Easy to understand and code.</li>
+                <li><strong>Convoy effect:</strong> Short processes may get stuck behind long processes.</li>
+                <li><strong>No priority:</strong> Doesn't consider the burst time of processes for scheduling.</li>
+            </ul>
+            
+            <h3><i class="fas fa-thumbs-up"></i> Advantages:</h3>
+            <ul>
+                <li>Easy to understand and implement</li>
+                <li>No starvation - Every process gets a chance to execute eventually</li>
+                <li>Fair in the sense of first come, first served</li>
+            </ul>
+            
+            <h3><i class="fas fa-thumbs-down"></i> Disadvantages:</h3>
+            <ul>
+                <li>Poor performance for short processes when long processes arrive first</li>
+                <li>Not suitable for time-sharing systems</li>
+                <li>May result in poor average turnaround time, especially with varying burst times</li>
+            </ul>
+            
+            <h3><i class="fas fa-project-diagram"></i> Example:</h3>
+            <p>
+                Consider three processes arriving in the order P1, P2, P3 with burst times 24, 3, 3 respectively. 
+                The average waiting time would be (0 + 24 + 27)/3 = 17ms, which is quite high due to the convoy effect.
+            </p>
+            
+            <div class="card-links" style="margin-top: 30px;">
+                <a class="demo" href="fcfs_d.html">
+                    <i class="fas fa-play"></i> Try FCFS Demo
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
