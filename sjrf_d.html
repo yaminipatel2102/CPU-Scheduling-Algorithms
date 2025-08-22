@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJRF Scheduling Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-exchange-alt"></i> SJRF Scheduling Demo</h1>
+            <p>Visualize the Shortest Remaining Time First (Preemptive) CPU Scheduling Algorithm</p>
+        </div>
+        
+        <div class="box">
+            <div class="input">
+                <label for="nprocesses"><i class="fas fa-cogs"></i> Number of Processes:</label>
+                <input id="nprocesses" name="nprocesses" type="number" min="1" max="10" placeholder="Enter number (1-10)">
+                
+                <div class="alert alert-warning">
+                    <i class="fas fa-info-circle"></i> You can add between 1 to 10 processes
+                </div>
+                
+                <button id="inputButton" onclick="displayInputTable()">
+                    <i class="fas fa-table"></i> Generate Process Table
+                </button>
+            </div>
+            
+            <div class="table" id="inputTable"></div>
+            
+            <button id="save" onclick="saveData()" style="display: none; margin-top: 20px;">
+                <i class="fas fa-save"></i> Save Process Data
+            </button>
+            
+            <div id="options"></div>
+            
+            <h3 style="margin-top: 30px; color: var(--primary);">Gantt Chart</h3>
+            <div id="gainchart"></div>
+            
+            <h3 style="margin-top: 30px; color: var(--primary);">Results</h3>
+            <div id="outputTable"></div>
+            
+            <h3 style="margin-top: 30px; color: var(--primary);">Performance Analysis</h3>
+            <div id="analysis"></div>
+            
+            <button id="clear" onclick="clearAll()" style="display: none; margin-top: 30px; background-color: var(--danger);">
+                <i class="fas fa-trash-alt"></i> Clear All Data
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="sjrf.js"></script>
+    <script src="cd.js"></script>
+</body>
+</html>
