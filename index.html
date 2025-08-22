@@ -1,0 +1,245 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Algorithms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #3498db;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .navbar a:hover {
+            background: #2980b9;
+        }
+        
+        .navbar a i {
+            margin-right: 8px;
+        }
+        
+        /* Card Layout */
+        .card-container.vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .card.vertical-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding: 25px;
+            transition: transform 0.3s;
+        }
+        
+        .card.vertical-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card.vertical-card h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        
+        .card-links.vertical-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .card-links a {
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .read-more {
+            background: #3498db;
+            color: white;
+        }
+        
+        .read-more:hover {
+            background: #2980b9;
+        }
+        
+        .demo {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .demo:hover {
+            background: #27ae60;
+        }
+        
+        /* Comparison Table */
+        .comparison-section {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .algorithm-name {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CPU Scheduling Algorithms</h1>
+            <p>Visualize and understand different CPU scheduling techniques</p>
+        </div>
+        
+        <div class="navbar">
+            <a href="#fcfs"><i class="fas fa-clock"></i> FCFS</a>
+            <a href="#sjf"><i class="fas fa-bolt"></i> SJF</a>
+            <a href="#sjrf"><i class="fas fa-exchange-alt"></i> SRTF</a>
+            <a href="#round-robin"><i class="fas fa-redo"></i> Round Robin</a>
+            <a href="compare.html"><i class="fas fa-table"></i> Comparison</a>
+        </div>
+        
+        <div class="card-container vertical">
+            <div class="card vertical-card" id="fcfs">
+                <h2>FCFS (First-Come First-Served)</h2>
+                <p>The simplest scheduling algorithm that executes processes in the order they arrive. Non-preemptive and easy to implement but can lead to the convoy effect.</p>
+                <div class="card-links vertical-links">
+                    <a class="read-more" href="fcfs_r.html"><i class="fas fa-book"></i> Learn More</a>
+                    <a class="demo" href="fcfs_d.html"><i class="fas fa-play"></i> Live Demo</a>
+
+                </div>
+            </div>
+            
+            <div class="card vertical-card" id="sjf">
+                <h2>SJF (Shortest Job First)</h2>
+                <p>Executes the process with the smallest burst time first. Can be either preemptive or non-preemptive. Reduces average waiting time but requires knowledge of burst times.</p>
+                <div class="card-links vertical-links">
+                    <a class="read-more" href="sjf_r.html"><i class="fas fa-book"></i> Learn More</a>
+                    <a class="demo" href="sjf_d.html"><i class="fas fa-play"></i> Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="card vertical-card" id="sjrf">
+                <h2>SRTF (Shortest Remaining Time First)</h2>
+                <p>The preemptive version of SJF where the currently executing process can be interrupted if a new process arrives with a shorter burst time.</p>
+                <div class="card-links vertical-links">
+                    <a class="read-more" href="sjrf_r.html"><i class="fas fa-book"></i> Learn More</a>
+                    <a class="demo" href="sjrf_d.html"><i class="fas fa-play"></i> Live Demo</a>
+                </div>
+            </div>
+            
+            <div class="card vertical-card" id="round-robin">
+                <h2>Round Robin</h2>
+                <p>Each process gets a small unit of CPU time (time quantum) in cyclic order. Preemptive and fair, but performance depends heavily on the time quantum chosen.</p>
+                <div class="card-links vertical-links">
+                    <a class="read-more" href="rr_r.html"><i class="fas fa-book"></i> Learn More</a>
+                    <a class="demo" href="rr_d.html"><i class="fas fa-play"></i> Live Demo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer">
+            <p>CPU Scheduling Algorithms Visualization Project | Operating Systems Concept</p>
+        </div>
+    </div>
+</body>
+</html>
