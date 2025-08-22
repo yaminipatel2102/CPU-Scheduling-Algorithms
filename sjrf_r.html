@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shortest Remaining Job First (SRTF) Scheduling Algorithm</title>
+
+
+<link href="style.css" rel="stylesheet"/></head>
+<body><div class="container">
+<div class="container">
+<header>
+<h1>Shortest Remaining Job First (SRTF) Scheduling Algorithm</h1>
+</header>
+<section id="overview">
+<h2>Overview</h2>
+<p>
+                Shortest Remaining Job First (SRTF), also known as Preemptive Shortest Job First (SJF), is a scheduling algorithm that selects the process with the smallest remaining burst time to execute next. Unlike SJF, SRTF can preempt a running process if a new process with a shorter burst time arrives in the ready queue.
+            </p>
+</section>
+<section id="operation">
+<h2>Operation</h2>
+<p>
+                In Shortest Remaining Time First (SRTF) scheduling:
+            </p>
+<ul>
+<li>Processes are executed based on their remaining burst time, not their total burst time.</li>
+<li>The scheduler selects the process with the smallest remaining time from the ready queue.</li>
+<li>If a new process arrives with a shorter remaining time than the currently executing process, it preempts the running process.</li>
+<li>The preempted process is placed back into the ready queue with its remaining time adjusted.</li>
+<li>This continues until all processes are completed.</li>
+</ul>
+</section>
+<section id="advantages">
+<h2>Advantages</h2>
+<ul>
+<li>Minimizes average waiting time for processes.</li>
+<li>Provides better response time for shorter processes compared to non-preemptive algorithms.</li>
+<li>Optimal for environments where new processes with shorter burst times frequently arrive.</li>
+</ul>
+</section>
+<section id="disadvantages">
+<h2>Disadvantages</h2>
+<ul>
+<li>Requires frequent context switching, which can lead to overhead.</li>
+<li>Implementation complexity due to managing and updating remaining burst times dynamically.</li>
+<li>May suffer from starvation for longer processes if shorter processes continually arrive.</li>
+</ul>
+</section>
+</div>
+</div></body>
+</html>
