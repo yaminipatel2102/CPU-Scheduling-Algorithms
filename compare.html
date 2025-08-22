@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Algorithms Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .algorithm-name {
+            font-weight: bold;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>CPU Scheduling Algorithms Comparison</h1>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Preemptive?</th>
+                    <th>Decision Mode</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="algorithm-name">FCFS (First-Come-First-Served)</td>
+                    <td>No</td>
+                    <td>Arrival time</td>
+                    <td>Simple implementation</td>
+                    <td>Convoy effect (long jobs delay short ones)</td>
+                </tr>
+                <tr>
+                    <td class="algorithm-name">SJF (Shortest Job First)</td>
+                    <td>No/Yes</td>
+                    <td>Burst time</td>
+                    <td>Optimal for minimizing average waiting time</td>
+                    <td>Starvation of longer jobs</td>
+                </tr>
+                <tr>
+                    <td class="algorithm-name">SRTF (Shortest Remaining Time First)</td>
+                    <td>Yes</td>
+                    <td>Remaining time</td>
+                    <td>Responsive to short jobs</td>
+                    <td>High overhead from frequent context switches</td>
+                </tr>
+                <tr>
+                    <td class="algorithm-name">Round Robin</td>
+                    <td>Yes</td>
+                    <td>Time quantum</td>
+                    <td>Fair allocation of CPU time</td>
+                    <td>Performance depends on choosing good time quantum</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>CPU Scheduling Algorithms Comparison Table | Operating Systems Concept</p>
+    </div>
+</body>
+</html>
