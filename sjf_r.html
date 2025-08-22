@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shortest Job First (SJF) Scheduling Algorithm</title>
+
+
+<link href="style.css" rel="stylesheet"/></head>
+<body><div class="container">
+<div class="container">
+<header>
+<h1>Shortest Job First (SJF) Scheduling Algorithm</h1>
+</header>
+<section id="overview">
+<h2>Overview</h2>
+<p>
+                Shortest Job First (SJF) is a scheduling algorithm that selects the waiting process with the smallest execution time to execute next. It belongs to the family of non-preemptive scheduling algorithms where once a process starts executing, it runs to completion.
+            </p>
+</section>
+<section id="types">
+<h2>Types of SJF</h2>
+<ul>
+<li><strong>Non-Preemptive SJF:</strong> Once a process starts executing, it continues until it finishes. The scheduler selects the process with the shortest burst time from the ready queue.</li>
+<li><strong>Preemptive SJF:</strong> Also known as Shortest Remaining Time First (SRTF), this variant allows the currently running process to be preempted if a new process with a shorter burst time enters the ready queue.</li>
+</ul>
+</section>
+<section id="advantages">
+<h2>Advantages</h2>
+<ul>
+<li>Minimizes average waiting time for processes.</li>
+<li>Works well for both long and short processes, leading to optimal average turnaround time.</li>
+</ul>
+</section>
+<section id="disadvantages">
+<h2>Disadvantages</h2>
+<ul>
+<li>Requires knowledge of process burst times in advance, which is not always feasible in practical scenarios.</li>
+<li>Can suffer from starvation for longer processes if shorter processes continually arrive.</li>
+</ul>
+</section>
+</div>
+</div></body>
+</html>
